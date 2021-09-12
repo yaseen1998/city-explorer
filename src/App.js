@@ -83,7 +83,9 @@ export class App extends Component {
 
           />
         }
-         
+         <img src={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&zoom=1-18
+        &center=${this.state.lat_lon}`} 
+   alt='' />
         
       </div>
     )
