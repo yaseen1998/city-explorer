@@ -28,7 +28,8 @@ export class Location extends Component {
   </tbody>
 </table>
 <div className="ratio ratio-16x9 div_iframe">
-      <iframe src={this.props.map}  title="country map" allowfullscreen className={this.props.iframe}></iframe>
+      {/* <iframe src={this.props.map}  title="country map" allowfullscreen className={this.props.iframe}></iframe> */}
+      <iframe src={this.props.img}  title="country map" allowfullscreen className={this.props.iframe}></iframe>
     </div>
             </div>
         )

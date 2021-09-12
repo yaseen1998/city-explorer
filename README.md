@@ -7,8 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run:
 
 ### `npm start`
-
+REACT_APP_LOCATIONIQ_API_KEY = pk.09bd02b2059b3e9849f6114e5eb11ae2
 Runs the app in the development mode.\
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
