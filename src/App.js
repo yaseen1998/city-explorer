@@ -78,13 +78,13 @@ export class App extends Component {
                     type={this.state.type}
                     lat={this.state.lat}
                     lon={this.state.lon}
+                    map={this.state.map}
+                    iframe={this.state.iframe}
 
           />
         }
          
-         <div className="ratio ratio-16x9 div_iframe">
-      <iframe src={this.state.map}  title="country map" allowfullscreen className={this.state.iframe}></iframe>
-    </div>
+        
       </div>
     )
   }

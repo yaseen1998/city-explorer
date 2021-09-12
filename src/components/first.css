@@ -3,7 +3,7 @@
     border-color: black;
     border-width: 8px;
     position: absolute;
-    left: 30%;
-    width: 40%;
-    height: 60%;
+    left: 30% !important;
+    width: 40% !important; 
+    height: 60% !important;
 }
