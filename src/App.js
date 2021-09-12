@@ -24,7 +24,8 @@ export class App extends Component {
     e.preventDefault();
     let config={
       method:"GET",
-      baseURL:`https://api.locationiq.com/v1/autocomplete.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city_name}`
+      baseURL:`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city_name}&format=json`
+      
     }
     axios(config).then(res=>{
       let responseData=res.data[0]
