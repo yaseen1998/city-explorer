@@ -6,9 +6,9 @@ export class Weather extends Component {
             <div>
                 <h1> {this.props.name}</h1>
                 {
-                 this.props.forcast.map(item=>{
+                 this.props.forcast.map((item,index)=>{
             return (
-                    <div>
+                    <div key={index}>
               <h1> {item.date} : {item.description} </h1>
               </div>
               )
