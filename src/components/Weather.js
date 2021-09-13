@@ -4,6 +4,7 @@ export class Weather extends Component {
     render() {
         return (
             <div>
+                <h1> {this.props.name}</h1>
                 {
                  this.props.forcast.map(item=>{
             return (

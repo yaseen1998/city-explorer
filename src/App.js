@@ -20,7 +20,8 @@ export class App extends Component {
       iframe: "",
       error:'',
       errorhandle:false,
-      weather:[]
+      weather:[],
+      name_weather:[]
     };
   }
   handleLocation = (e) => {
@@ -50,7 +51,8 @@ export class App extends Component {
     axios.get(`http://${process.env.REACT_APP_BACKEND_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`))
     .then(res=>{
       this.setState({
-        weather:res.data
+        weather:res.data.foreCast,
+        name_weather:res.data.city_name
       })
       console.log(this.state.weather);
     })
@@ -77,7 +79,7 @@ export class App extends Component {
           />
 
         )}
-        <Weather forcast = {this.state.weather}/>
+        <Weather forcast = {this.state.weather} name = {this.state.name_weather}/>
 
 
 
