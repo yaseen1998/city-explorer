@@ -1,7 +1,12 @@
+
+# Project Name
+
+**Author**: yaseen kouteh
+
 [netlify](https://yaseen-city.netlify.app)
 # Project Name
 
-**Author**: Yaseen Saeed
+
 **Version**: 1.0.0 
 
 ## Overview (problem domain)
@@ -22,6 +27,7 @@ This App Contains a Form on it's first page so the user can type the name of the
 
 Name of feature: API 
 
+
 Estimate of time needed to complete: 3 
 
 Start time: 2
@@ -33,4 +39,5 @@ Actual time needed to complete: 4
 
 ## Credit and Collaborations
 To *My partner in this Lab* **[rand ](https://github.com/Rand92)**
+
 
