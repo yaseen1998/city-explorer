@@ -4,6 +4,8 @@ import SearchForm from "./components/SearchForm";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./components/first.css";
+import { Alert } from "react-bootstrap";
+import Weather from "./components/Weather";
 
 export class App extends Component {
   constructor(props) {
@@ -16,6 +18,9 @@ export class App extends Component {
       map: "",
       showData: false,
       iframe: "",
+      error:'',
+      errorhandle:false,
+      weather:[]
     };
   }
   handleLocation = (e) => {
@@ -33,7 +38,6 @@ export class App extends Component {
 
     axios(config).then((res) => {
       let responseData = res.data[0];
-      console.log(responseData);
       this.setState({
         city_name: responseData.display_name,
         lon: responseData.lon,
@@ -42,8 +46,16 @@ export class App extends Component {
         showData: true,
         iframe: "iframe",
       });
-    });
-  };
+    }).catch(e=>{this.setState({error:e.toString(),errorhandle:true})}).then(()=>
+    axios.get(`http://${process.env.REACT_APP_BACKEND_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`))
+    .then(res=>{
+      this.setState({
+        weather:res.data
+      })
+      console.log(this.state.weather);
+    })
+  }
+  // catch(e=>{this.setState({error:e.toString(),errorhandle:true})})
   render() {
     return (
       <div>
@@ -63,7 +75,18 @@ export class App extends Component {
             img={`https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&zoom=1-18
                     &center=${this.state.lat_lon}`}
           />
+
         )}
+        <Weather forcast = {this.state.weather}/>
+
+
+
+       {this.state.errorhandle &&( <Alert variant='dark'>
+       {this.state.error}
+  </Alert>)}
+
+
+ 
       </div>
     );
   }
