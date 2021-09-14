@@ -96,7 +96,6 @@ export class App extends Component {
 
   </Alert>)}
 
-{/* {this.state.errorhandle && (this.setState({weather:[]}))} */}
 
  
       </div>
