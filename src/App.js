@@ -77,7 +77,7 @@ export class App extends Component {
       })
       .then(() =>
         axios.get(
-          `https://city-explorer-yaseen.herokuapp.com/movie?query=${this.state.originalname}`
+          `${process.env.REACT_SERVER_URL}/movie?query=${this.state.originalname}`
         )
       )
       .then((res) => {
