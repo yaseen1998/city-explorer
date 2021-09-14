@@ -62,7 +62,7 @@ export class App extends Component {
         this.setState({ error: e.toString(), errorhandle: true });
       })
       .then(() =>
-        axios.get(`https://city-explorer-yaseen.herokuapp.com/weather?lat=${this.state.lat}&lon=${this.state.lon}`
+        axios.get(`${process.env.REACT_SERVER_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`
           
         )
       )
@@ -77,7 +77,7 @@ export class App extends Component {
       })
       .then(() =>
         axios.get(
-          `https://city-explorer-yaseen.herokuapp.com/movie?query=${this.state.originalname}`
+          `${process.env.REACT_APP_BACKEND_URL}/movie?query=${this.state.originalname}`
         )
       )
       .then((res) => {
