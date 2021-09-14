@@ -98,7 +98,8 @@ export class App extends Component {
         />
         {this.state.showData && this.state.errorhandle === false && (
           <Location
-            city_name={this.state.city_name}
+
+          city_name={this.state.city_name}
             type={this.state.type}
             lat={this.state.lat}
             lon={this.state.lon}
