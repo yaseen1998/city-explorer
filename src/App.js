@@ -48,6 +48,7 @@ export class App extends Component {
         showData: true,
         iframe: "iframe",
         errorhandle:false,
+        errorhand:false
       });
     }).catch(e=>{this.setState({error:e.toString(),errorhandle:true})}).then(()=>
     axios.get(`http://${process.env.REACT_APP_BACKEND_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`))
@@ -56,8 +57,7 @@ export class App extends Component {
         weather:res.data.foreCast,
         name_weather:res.data.city_name
       })
-      console.log(this.state.weather);
-    }).catch(e=>{this.setState({err:e.toString(),errorhandle:true})})
+    }).catch(e=>{this.setState({err:e.toString(),errorhand:true})})
   }
   // catch(e=>{this.setState({error:e.toString(),errorhandle:true})})
   render() {
@@ -81,14 +81,18 @@ export class App extends Component {
           />
 
         )}
-        {this.state.errorhandle===false &&(
+        {this.state.errorhand===false &&(
         <Weather forcast = {this.state.weather} name = {this.state.name_weather}/>)}
 
 
 
        {this.state.errorhandle &&( <Alert variant='dark'>
-       {this.state.error} <br/> {this.state.err} 
+       {this.state.error} 
 
+  </Alert>)}
+
+       {this.state.errorhand &&( <Alert variant='dark'>
+       {this.state.err} 
 
   </Alert>)}
 
