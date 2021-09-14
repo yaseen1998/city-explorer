@@ -77,7 +77,7 @@ export class App extends Component {
       })
       .then(() =>
         axios.get(
-          `${process.env.REACT_SERVER_URL}/movie?query=${this.state.originalname}`
+          `${process.env.REACT_APP_BACKEND_URL}/movie?query=${this.state.originalname}`
         )
       )
       .then((res) => {
