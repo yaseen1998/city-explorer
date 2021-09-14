@@ -63,7 +63,7 @@ export class App extends Component {
       })
       .then(() =>
         axios.get(
-          `http://${process.env.REACT_APP_BACKEND_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`
+          `http://${process.env.REACT_SERVER_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`
         )
       )
       .then((res) => {
@@ -77,7 +77,7 @@ export class App extends Component {
       })
       .then(() =>
         axios.get(
-          `http://${process.env.REACT_APP_BACKEND_URL}/movie?query=${this.state.originalname}`
+          `http://${process.env.REACT_SERVER_URL}/movie?query=${this.state.originalname}`
         )
       )
       .then((res) => {
