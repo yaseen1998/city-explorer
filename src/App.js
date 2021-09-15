@@ -7,6 +7,8 @@ import "./components/first.css";
 import { Alert } from "react-bootstrap";
 import Weather from "./components/Weather";
 import Movie from "./components/Movie";
+
+
 export class App extends Component {
   constructor(props) {
     super(props);
