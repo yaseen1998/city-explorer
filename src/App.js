@@ -62,7 +62,7 @@ export class App extends Component {
         this.setState({ error: e.toString(), errorhandle: true });
       })
       .then(() =>
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/weather?lat=${this.state.lat}&lon=${this.state.lon}`
+        axios.get(`https://city-explorer-yaseen.herokuapp.com/weather?lat=${this.state.lat}&lon=${this.state.lon}`
           
         )
       )
