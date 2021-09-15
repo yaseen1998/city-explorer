@@ -30,20 +30,7 @@ export class Movie extends Component {
     </Col>
   ))}
 </Row>
-{/* {
-                 this.props.movielist.map(item=>{
-            return (
-                    <div>
-              <h2> title:{item.title}  </h2>
-              <h2></h2>
-              <h2></h2>
-              <h2></h2>
-              <h2></h2>
-              <h2></h2>
-              </div>
-              )
-          })
-          } */}
+
     </div>;
   }
 }
