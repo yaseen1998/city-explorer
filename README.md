@@ -30,6 +30,15 @@ Finish time: 6
 
 Actual time needed to complete: 4
 
+Name of feature: arrang the code
+
+Estimate of time needed to complete: 30 minutes
+
+Start time: 1:30
+
+Finish time: 1:45
+
+Actual time needed to complete: 15 minutes
 
 ## Credit and Collaborations
 To *My partner in this Lab* **[rand ](https://github.com/Rand92)**
