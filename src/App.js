@@ -75,7 +75,7 @@ class App extends Component {
           handleSubmit={this.handleSubmit}
         />
         <Locationdata location={this.state.locationData}/>
-        <Weatherdata weather={this.state.weatherData}/>
+        {/* <Weatherdata weather={this.state.weatherData}/> */}
         <Moviedata movie={this.state.movieData}/>
       </div>
     );
