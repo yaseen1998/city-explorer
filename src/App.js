@@ -51,19 +51,20 @@ class App extends Component {
       this.setState({
         locationData: location.data[0],
         errorMsg: "",
-        weatherData: weather.data.foreCast,
+        weatherData: weather.data,
         movieData: movie.data,
         displayLocation: false,
       });
+      console.log(this.state.weatherData);
       //end store API data
     } catch (error) {
       //start catch error
       this.setState({
-        errorMsg: error.message,
+        // errorMsg: error.message,
         // displayLocation: false,
         // showWeather: false,
         // showMovie: false,
-        movieData: error.response,
+        // movieData: error.response,
       });
     }
   };

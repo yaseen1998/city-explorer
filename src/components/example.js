@@ -36,7 +36,7 @@ export class App extends Component {
       
     });
   };
-  handleSubmit = (e) => {
+  handleSubmit = async(e) => {
     e.preventDefault();
     this.setState({
       originalname: this.state.city_name,

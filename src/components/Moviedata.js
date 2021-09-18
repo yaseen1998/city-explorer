@@ -7,7 +7,6 @@ export class Moviedata extends Component {
   }
 
   render() {
-    console.log(this.props.movie);
     return <div>
 <Row xs={1} md={3} className="g-4">
   {this.props.movie.map((item, idx) => (
